@@ -1,87 +1,122 @@
-# N-Comics Platform
+# 🌐 N-COMICS — Platform Komik Online Berbasis PHP (CRUD)
 
-## 👤 Author
+## 👤 Profil Mahasiswa
 
-| Field    | Detail                    |
-|----------|---------------------------|
-| Nama     | Aditya Renanda Widyatama  |
-| NIM      | 202121420007              |
-| GitHub   | [@tpzmous](https://github.com/tpzmous) |
-
----
-
-Welcome to the **N-Comics Platform** source code repository. N-Comics is a modern, Webtoon-style comic reading platform built on Laravel 11/12, featuring a robust Admin portal and a sleek "Soft Dark Navy/Cyan" public user interface utilizing PDF.js for vertical continuous scrolling.
+| Field     | Detail                   |
+|-----------|--------------------------|
+| **Nama**  | Aditya Renanda Widyatama |
+| **NIM**   | 202121420007             |
+| **GitHub**| [@tpzmous](https://github.com/tpzmous) |
 
 ---
 
-## 💻 System Requirements
+## 📖 Tentang Proyek
 
-Before installing, please ensure your Windows environment has the following prerequisites installed and running:
+**N-COMICS** adalah aplikasi web berbasis **PHP dengan framework Laravel** yang menerapkan konsep **CRUD (Create, Read, Update, Delete)** secara penuh pada manajemen data komik dan episode.
 
-* **PHP** (>= 8.2)
-* **Composer** (v2+)
-* **Node.js** (v18+) & **NPM**
-* **MySQL** Server (XAMPP, Laragon, or standalone)
-* **Git** (optional, for version control)
+Proyek ini dikembangkan sebagai platform membaca komik online bergaya modern dengan dua sisi:
+- **Panel Admin** — untuk mengelola data komik dan episode (CRUD)
+- **Halaman Publik** — untuk pengunjung membaca komik
 
 ---
 
-## 🚀 One-Click Installation (Windows)
+## 🔄 Implementasi CRUD
 
-We have provided an automated setup script that will configure the entire application for you from scratch!
+### 📚 Manajemen Komik
+| Operasi  | Deskripsi                                              |
+|----------|--------------------------------------------------------|
+| **Create** | Admin dapat menambahkan komik baru beserta cover, genre, author, dan deskripsi |
+| **Read**   | Daftar komik ditampilkan di panel admin maupun halaman publik dengan filter & pencarian |
+| **Update** | Admin dapat mengubah detail komik dan mengganti gambar cover |
+| **Delete** | Admin dapat menghapus komik beserta episode-episodenya |
 
-### 1. Database Setup
-First, ensure your local MySQL server is running. Create an empty database for the project. The default name expected in `.env` is `comic_platform`.
-- Open your MySQL client (e.g., phpMyAdmin, HeidiSQL, or MySQL CLI).
-- Run: `CREATE DATABASE comic_platform;`
+### 📄 Manajemen Episode
+| Operasi  | Deskripsi                                              |
+|----------|--------------------------------------------------------|
+| **Create** | Admin dapat mengunggah episode baru dalam format PDF |
+| **Read**   | Episode ditampilkan secara berurutan dan dapat dibaca oleh pengunjung |
+| **Update** | Admin dapat mengganti judul dan file PDF episode |
+| **Delete** | Admin dapat menghapus episode dari komik tertentu |
 
-### 2. Run the Installer
-Navigate into the root of this project folder using your File Explorer.
-Simply **Double-Click** the `install.bat` file.
+---
 
-The script will automatically perform the following steps:
-1. Install PHP dependencies (`composer install`)
-2. Copy `.env.example` to `.env` if it doesn't exist
-3. Generate your Laravel App Key
-4. Create public storage symlinks
-5. Create required storage folders (covers, episodes, comics)
-6. Run database migrations and seed 10 dummy comics + admin account
-7. Install NPM packages (`npm install`)
-8. Compile frontend assets (`npm run build`)
-9. Clear cache and optimize
-10. Secure local storage folders and permissions
+## 🛠 Teknologi yang Digunakan
 
-*Note: You may be prompted to allow permissions during the `icacls` step.*
+| Teknologi     | Keterangan                                 |
+|---------------|--------------------------------------------|
+| PHP 8.2       | Bahasa pemrograman utama                   |
+| Laravel 12    | Framework PHP (MVC Architecture)           |
+| MySQL         | Database relasional                        |
+| Tailwind CSS  | Framework CSS untuk tampilan modern        |
+| Vite          | Bundler frontend                           |
+| PDF.js        | Render file PDF langsung di browser        |
+| Blade         | Template engine bawaan Laravel             |
 
-### 3. Start the Server
-After installation, double-click **`start.bat`** to run the server anytime, or run:
+---
 
-```bash
-php -d upload_max_filesize=200M -d post_max_size=200M artisan serve --port=8000
+## 💻 Kebutuhan Sistem
+
+Pastikan komputer sudah terinstall:
+
+- **PHP** >= 8.2
+- **Composer** v2+
+- **Node.js** v18+ & **NPM**
+- **MySQL** (XAMPP / Laragon / standalone)
+
+---
+
+## 🚀 Cara Instalasi (Windows)
+
+### Langkah 1 — Siapkan Database
+Buat database kosong di MySQL dengan nama `comic_platform`:
+```sql
+CREATE DATABASE comic_platform;
 ```
 
-Access the application via your web browser:
-**http://127.0.0.1:8000**
+### Langkah 2 — Jalankan Installer
+Klik dua kali file **`install.bat`** di folder proyek.
+
+Script akan otomatis melakukan:
+1. Install dependensi PHP (`composer install`)
+2. Salin file `.env.example` → `.env`
+3. Generate Laravel App Key
+4. Buat symlink storage publik
+5. Buat folder storage (covers, episodes, comics)
+6. Jalankan migrasi & seeder (10 komik dummy + akun admin)
+7. Install NPM & compile aset frontend
+8. Bersihkan cache
+
+### Langkah 3 — Jalankan Server
+Klik dua kali **`start.bat`**, lalu buka browser:
+
+```
+http://127.0.0.1:8000
+```
 
 ---
 
-## 🔒 Default Admin Account
+## 🔒 Akun Admin Default
 
-| Field    | Value                |
-|----------|----------------------|
-| Email    | admin@ncomics.com    |
-| Password | admin123             |
-| Role     | Administrator        |
+| Field        | Value              |
+|--------------|--------------------|
+| **Email**    | admin@ncomics.com  |
+| **Password** | admin123           |
+| **Role**     | Administrator      |
+
+> Akun pengguna biasa **hanya bisa dibuat oleh admin**. Tidak ada fitur registrasi publik.
+
+---
+
+## ✨ Fitur Unggulan
+
+- ✅ CRUD Komik & Episode dengan upload gambar dan PDF
+- ✅ Panel admin yang lengkap dan responsif
+- ✅ Reader PDF vertikal tanpa batas halaman
+- ✅ Filter genre, pencarian judul, dan pengurutan komik
+- ✅ Tema dark mode modern dengan aksen neon cyan
+- ✅ 10 data dummy komik tersedia otomatis setelah instalasi
+- ✅ Manajemen akun user oleh admin
 
 ---
 
-## 🛠 Features Included
-
-* **Continuous Vertical PDF Reader** — Upload comic episodes as PDF files, rendered page-by-page dynamically.
-* **Modern Aesthetic** — Soft Dark Navy & Neon Cyan theme with glassmorphism and glow animations.
-* **Complete Admin Panel** — Create, edit, delete comics and episodes with cover image upload.
-* **Genre & Filter System** — Dynamic genre chips, search, and sort on the public comic listing page.
-* **10 Dummy Comics** — Seeder auto-populates 10 sample comics with cover images and 3 episodes each.
-* **Auto-Increment Episodes** — Episode numbers assigned automatically per comic.
-
----
+*Dibuat untuk keperluan ujian kompetensi LSP 2026*
