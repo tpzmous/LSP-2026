@@ -1,5 +1,15 @@
 # N-Comics Platform
 
+## 👤 Author
+
+| Field    | Detail                    |
+|----------|---------------------------|
+| Nama     | Aditya Renanda Widyatama  |
+| NIM      | 202121420007              |
+| GitHub   | [@tpzmous](https://github.com/tpzmous) |
+
+---
+
 Welcome to the **N-Comics Platform** source code repository. N-Comics is a modern, Webtoon-style comic reading platform built on Laravel 11/12, featuring a robust Admin portal and a sleek "Soft Dark Navy/Cyan" public user interface utilizing PDF.js for vertical continuous scrolling.
 
 ---
@@ -27,7 +37,7 @@ First, ensure your local MySQL server is running. Create an empty database for t
 
 ### 2. Run the Installer
 Navigate into the root of this project folder using your File Explorer.
-Simply **Double-Click** the `install.bat` file. 
+Simply **Double-Click** the `install.bat` file.
 
 The script will automatically perform the following steps:
 1. Install PHP dependencies (`composer install`)
@@ -57,32 +67,21 @@ Access the application via your web browser:
 
 ## 🔒 Default Admin Account
 
-The installation process generates an administrator account by default via Database Seeders. You can use these credentials to log in to the admin panel at `/login`:
-
-* **Email:** `admin@ncomics.com`
-* **Password:** `admin123`
-* **Role:** Administrator
+| Field    | Value                |
+|----------|----------------------|
+| Email    | admin@ncomics.com    |
+| Password | admin123             |
+| Role     | Administrator        |
 
 ---
 
 ## 🛠 Features Included
 
-* **Continuous Vertical PDF Reader:** Upload comic episodes as PDF files, which are rendered page-by-page dynamically with no manual page turning required.
-* **Modern Aesthetic:** Theme styled intricately using standard structural utility HTML (TailwindCSS - Soft Dark Navy & Neon Cyan). Includes responsive Navigation components and glow-in-the-dark CSS animations.
-* **Complete Admin CRM:** Create comics, assign authors and descriptions, and safely upload episode data.
-* **Genre & Filter System:** Dynamic genre filtering, search, and sort on the public comic listing page.
-* **10 Dummy Comics:** Seeder automatically populates 10 sample comics with cover images and 3 episodes each.
-* **Auto-Increment Episodes:** All standard uploads automatically acquire episode numbers bound perfectly by advanced Database Transactions.
-* **All Comics Grid & Search UI:** Find comics via the built-in search filter query.
-
----
-
-## 👤 Author
-
-| | |
-|---|---|
-| **Nama** | Aditya Renanda Widyatama |
-| **NIM** | 202121420007 |
-| **GitHub** | [@tpzmous](https://github.com/tpzmous) |
+* **Continuous Vertical PDF Reader** — Upload comic episodes as PDF files, rendered page-by-page dynamically.
+* **Modern Aesthetic** — Soft Dark Navy & Neon Cyan theme with glassmorphism and glow animations.
+* **Complete Admin Panel** — Create, edit, delete comics and episodes with cover image upload.
+* **Genre & Filter System** — Dynamic genre chips, search, and sort on the public comic listing page.
+* **10 Dummy Comics** — Seeder auto-populates 10 sample comics with cover images and 3 episodes each.
+* **Auto-Increment Episodes** — Episode numbers assigned automatically per comic.
 
 ---
