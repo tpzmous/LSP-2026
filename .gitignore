@@ -23,10 +23,5 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
-# User-uploaded & seeded media (generated at runtime)
-/storage/app/public/covers/
-/storage/app/public/episodes/
-/storage/app/public/comics/
-
 # Helper scripts (not needed in repo)
 create_db.php
